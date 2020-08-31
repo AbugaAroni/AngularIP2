@@ -7,5 +7,14 @@ import { environment} from '../environments/environment';
 })
 export class GithubapiService {
 
-  constructor(private http:HttpClient) { }
+  private username:string;
+
+  constructor(private http: HttpClient) {
+
+    this.username='abugaaroni';
+  }
+
+  getGithubUser() {
+    return this.http.get('https://api.github.com/users/' + this.username +'?access_token=' + ${environment.githubApiToken})
+  }
 }
