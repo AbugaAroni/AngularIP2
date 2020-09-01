@@ -1,10 +1,8 @@
 <div class="users">
   <div *ngIf=" gitUser ">
-    <p> Username </p>
-    <p> {{gitUser.login}} </p>
-    <p> Picture <p>
+    <p> Username: <span> {{gitUser.login}} </span> </p>
+    <p> Picture: <p>
     <img [src]="gitUser.avatar_url" alt="Image of github user">
-    <p> Respositories </p>
-    <p> {{gitUser.repos_url}} </p>
+    <p> Respositories <span> {{gitUser.repos_url}} </span> </p>
   </div>
 </div>

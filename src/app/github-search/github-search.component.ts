@@ -8,9 +8,19 @@ import { GithubapiService } from '../githubapi.service'
 })
 export class GithubSearchComponent implements OnInit {
 
-  constructor() { }
+  constructor(private githubapiService: GithubapiService) { }
 
   ngOnInit(): void {
+  }
+
+  search(searchName: string) {
+    if (searchName !== '') {
+      this.githubapiService.searchGithub(searchName)
+        .subscribe((response: any) => {
+          console.log('Search Data', response);
+        });
+    }
+
   }
 
 }
