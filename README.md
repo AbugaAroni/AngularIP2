@@ -1,27 +1,25 @@
-# AngularIP2
+# Github Profile Search Application / AngularWeek2 IP
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.6.
+### Author: [Abuga Aroni] (https://github.com/AbugaAroni/)
 
-## Development server
+### Description
+This is a web application that searches for and  displays information from a given users Github repository. It uses the Github API to achieve this functionality.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Features
+You can see a the authors photos, names, and repositories on the homepage.
+You can search a username to view a the users repository and relevant information.
 
-## Code scaffolding
+### Technologies Used
+Angular CLI
+Githup API
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Limitations / bugs
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Setup Instructions
+If you wish to view the project, you can view the published site in the html link below. If you wish to view the code, you may download the files and open them in a text editor of your choosing. If you wish to view the working website on your computer, you will need run the application through an angular compiler.
 
-## Running unit tests
+### Link to the published site: [Github Profile Search Application by Abuga] (https://abugaaroni.github.io/AngularIP1/)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### License: [MIT] (https://github.com/AbugaAroni/AngularIP2/blob/master/LICENSE)
