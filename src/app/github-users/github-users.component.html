@@ -1,1 +1,9 @@
-<p>github-users works!</p>
+<div class="users">
+  <p> Here is where the image should be <p>
+  <div *ngIf=" gitUser ">
+    <p> Here is where the image should be <p>
+    <img [src]="gitUser.avatar_url" alt="Image of github user">
+    <p> {{gitUser.id}} </p>
+    <p> {{ gitUser.login }} </p>
+  </div>
+</div>

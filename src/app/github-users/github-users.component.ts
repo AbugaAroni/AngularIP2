@@ -8,13 +8,13 @@ import { GithubapiService } from '../githubapi.service'
 })
 export class GithubUsersComponent implements OnInit {
 
+  gitUser;
+
   constructor(private githubapiService: GithubapiService) { }
 
   ngOnInit(): void {
     this.githubapiService.getGithubUser()
-    .subscribe((response: any) =>{
-      console.log('Data', response);
-    });
+    .subscribe(gitUser => this.gitUser = gitUser);
   }
 
 }
