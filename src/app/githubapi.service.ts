@@ -33,9 +33,14 @@ export class GithubapiService {
   }
 
   searchGithub(gitsearchName: string) {
-    return this.http.get('https://api.github.com/users/' + gitsearchName +'?access_token=' + environment.githubApiToken)
+    this.http.get('https://api.github.com/users/' + gitsearchName +'?access_token=' + environment.githubApiToken)
     .subscribe(gitUser => {
       this.gitUser.next(gitUser);
+    });
+
+    this.http.get('https://api.github.com/users/' + gitsearchName +'/repos?access_token=' + environment.githubApiToken)
+    .subscribe(repo => {
+      this.repos.next(repo);
     });
   }
 
