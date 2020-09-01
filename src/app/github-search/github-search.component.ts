@@ -15,10 +15,7 @@ export class GithubSearchComponent implements OnInit {
 
   search(searchName: string) {
     if (searchName !== '') {
-      this.githubapiService.searchGithub(searchName)
-        .subscribe((response: any) => {
-          console.log('Search Data', response);
-        });
+      this.githubapiService.searchGithub(searchName); 
     }
 
   }
