@@ -3,11 +3,15 @@
 
 
 .lightgrey {
-  background-color: lightblue;
-  border-style: double;
+  background-color: #ADD8E6;
+  border-style: outset;
   padding: 10px;
 }
 
 card {
   padding: 10px;
+}
+
+.styled {
+  font-weight: bold;
 }
