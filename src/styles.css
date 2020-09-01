@@ -1,2 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~bootstrap/dist/css/bootstrap.min.css"
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+
+.lightgrey {
+  background-color: lightblue;
+  border-style: double;
+  padding: 10px;
+}
+
+card {
+  padding: 10px;
+}

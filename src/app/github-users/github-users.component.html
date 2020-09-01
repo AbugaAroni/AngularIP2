@@ -1,16 +1,23 @@
 <div class="users">
   <div *ngIf="gitUser">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title"> {{gitUser.login}}</h3>
+    <div class="row lightgrey">
+      <div class="col-md-6">
+        <div class="card">
+          <img class="card-img-top" [src]="gitUser.avatar_url" alt="Image of github user">
+        </div>
       </div>
-      <div class="panel-body">
-        <div class="row">
-          <div class="col-md-4">
-            <p> Picture: <p>
-            <img [src]="gitUser.avatar_url" alt="Image of github user">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title" style>  {{gitUser.login}}: {{gitUser.name}}</h3>
           </div>
-            <p> Respositories <span> {{gitUser.repos_url}} </span> </p>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-12">
+                <p> Respositories: <span> {{gitUser.repos_url}} </span> </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
