@@ -1,9 +1,10 @@
 <div class="users">
-  <p> Here is where the image should be <p>
   <div *ngIf=" gitUser ">
-    <p> Here is where the image should be <p>
+    <p> Username </p>
+    <p> {{gitUser.login}} </p>
+    <p> Picture <p>
     <img [src]="gitUser.avatar_url" alt="Image of github user">
-    <p> {{gitUser.id}} </p>
-    <p> {{ gitUser.login }} </p>
+    <p> Respositories </p>
+    <p> {{gitUser.repos_url}} </p>
   </div>
 </div>
