@@ -9,6 +9,7 @@ import {BehaviorSubject} from 'rxjs';
 export class GithubapiService {
 
   gitUser = new BehaviorSubject<any>([]);
+  repos = new BehaviorSubject<any>([]);
 
   private username:string;
 
@@ -24,6 +25,13 @@ export class GithubapiService {
     });
   }
 
+  getGithubRepo() {
+    return this.http.get('https://api.github.com/users/' + this.username +'/repos?access_token=' + environment.githubApiToken)
+    .subscribe(repo => {
+      this.repos.next(repo);
+    });
+  }
+
   searchGithub(gitsearchName: string) {
     return this.http.get('https://api.github.com/users/' + gitsearchName +'?access_token=' + environment.githubApiToken)
     .subscribe(gitUser => {
@@ -33,5 +41,9 @@ export class GithubapiService {
 
   getUsers() {
     return this.gitUser.asObservable();
+  }
+
+  getRepos() {
+    return this.repos.asObservable();
   }
 }
