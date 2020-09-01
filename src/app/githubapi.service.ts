@@ -23,6 +23,7 @@ export class GithubapiService {
       this.gitUser.next(gitUser);
     });
   }
+
   searchGithub(gitsearchName: string) {
     return this.http.get('https://api.github.com/users/' + gitsearchName +'?access_token=' + environment.githubApiToken)
     .subscribe(gitUser => {
