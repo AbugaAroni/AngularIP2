@@ -15,6 +15,6 @@ export class GithubapiService {
   }
 
   getGithubUser() {
-    return this.http.get('https://api.github.com/users/' + this.username +'?access_token=' + ${environment.githubApiToken})
+    return this.http.get('https://api.github.com/users/' + this.username +'?access_token=' + environment.githubApiToken);
   }
 }
