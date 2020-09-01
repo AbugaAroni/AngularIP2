@@ -12,33 +12,35 @@ export class GithubapiService {
   repos = new BehaviorSubject<any>([]);
 
   private username:string;
+  private url:string;
 
   constructor(private http: HttpClient) {
 
     this.username='abugaaroni';
+    this.url = 'https://api.github.com/users/';
   }
 
   getGithubUser() {
-    return this.http.get('https://api.github.com/users/' + this.username +'?access_token=' + environment.githubApiToken)
+    return this.http.get(this.url + this.username +'?access_token=' + environment.githubApiToken)
     .subscribe(gitUser => {
       this.gitUser.next(gitUser);
     });
   }
 
   getGithubRepo() {
-    return this.http.get('https://api.github.com/users/' + this.username +'/repos?access_token=' + environment.githubApiToken)
+    return this.http.get(this.url + this.username +'/repos?access_token=' + environment.githubApiToken)
     .subscribe(repo => {
       this.repos.next(repo);
     });
   }
 
   searchGithub(gitsearchName: string) {
-    this.http.get('https://api.github.com/users/' + gitsearchName +'?access_token=' + environment.githubApiToken)
+    this.http.get(this.url+ gitsearchName +'?access_token=' + environment.githubApiToken)
     .subscribe(gitUser => {
       this.gitUser.next(gitUser);
     });
 
-    this.http.get('https://api.github.com/users/' + gitsearchName +'/repos?access_token=' + environment.githubApiToken)
+    this.http.get(this.url + gitsearchName +'/repos?access_token=' + environment.githubApiToken)
     .subscribe(repo => {
       this.repos.next(repo);
     });
