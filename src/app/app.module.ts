@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { GithubUsersComponent } from './github-users/github-users.component';
 import { GithubSearchComponent } from './github-search/github-search.component';
 import { RepositoriesComponent } from './repositories/repositories.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     GithubUsersComponent,
     GithubSearchComponent,
-    RepositoriesComponent
+    RepositoriesComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
