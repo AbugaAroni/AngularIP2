@@ -19,6 +19,9 @@
               <div class="col-md-12">
                 <p class="styled">Respositories:</p>
                 <app-repositories></app-repositories>
+                <div *ngIf="!gitUser.public_repos">
+                  <p appHighlight> User has no active repositories</p>
+                </div>
               </div>
             </div>
           </div>
