@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { GithubapiService } from '../githubapi.service';
 import { Subscription } from 'rxjs';
+import { Repos } from '../repos';
 
 @Component({
   selector: 'app-repositories',
@@ -9,7 +10,7 @@ import { Subscription } from 'rxjs';
 })
 export class RepositoriesComponent implements OnInit, OnDestroy {
 
-  repos;
+  repos: Repos;
   subscription: Subscription;
 
   constructor(private githubapiService: GithubapiService) { }
