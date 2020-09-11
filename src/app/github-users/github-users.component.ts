@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { GithubapiService } from '../githubapi.service';
 import { Subscription } from 'rxjs';
+import { Users } from '../users';
 
 @Component({
   selector: 'app-github-users',
@@ -9,7 +10,7 @@ import { Subscription } from 'rxjs';
 })
 export class GithubUsersComponent implements OnInit, OnDestroy {
 
-  gitUser;
+  gitUser: Users;
   subscription: Subscription;
 
   constructor(private githubapiService: GithubapiService) { }
