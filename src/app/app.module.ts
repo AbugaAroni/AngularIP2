@@ -8,6 +8,7 @@ import { GithubUsersComponent } from './github-users/github-users.component';
 import { GithubSearchComponent } from './github-search/github-search.component';
 import { RepositoriesComponent } from './repositories/repositories.component';
 import { HighlightDirective } from './highlight.directive';
+import { EmploymentCheckerPipe } from './employment-checker.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HighlightDirective } from './highlight.directive';
     GithubUsersComponent,
     GithubSearchComponent,
     RepositoriesComponent,
-    HighlightDirective
+    HighlightDirective,
+    EmploymentCheckerPipe
   ],
   imports: [
     BrowserModule,
